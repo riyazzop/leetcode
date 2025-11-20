@@ -17,8 +17,8 @@ class NumArray(object):
         :type right: int
         :rtype: int
         """
-        return self.nums[right] if left==0 else self.nums[right]-self.nums[left-1]
-        
+        summ=self.nums[right] if left==0 else self.nums[right]-self.nums[left-1]
+        return summ
         
 
 
