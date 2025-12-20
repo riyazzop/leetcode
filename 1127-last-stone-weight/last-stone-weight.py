@@ -4,12 +4,14 @@ class Solution(object):
         :type stones: List[int]
         :rtype: int
         """
-        stones=[-s for s in stones]
+        stones=[-stn for stn in stones]
         heapq.heapify(stones)
         while len(stones)>1:
-            first=abs(heapq.heappop(stones))
-            second=abs(heapq.heappop(stones))
-            if first>second:
-                new_stone=first-second
-                heapq.heappush(stones,-new_stone)
-        return -stones[0] if stones else 0        
+            stn1=abs(heapq.heappop(stones))
+            stn2=abs(heapq.heappop(stones))
+            if stn1>stn2:
+                heapq.heappush(stones,-(stn1-stn2))
+        return -stones[0] if stones else 0
+            
+
+
