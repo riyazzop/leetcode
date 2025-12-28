@@ -10,13 +10,14 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: List[int]
         """
+        if not root:return []
         res=[]
         q=collections.deque([root])
         while q:
-            rightNode=None
             qLen=len(q)
-            for i in range(qLen):
-                node=q.popleft()
+            rightNode=None
+            for _ in range(qLen):
+                node =q.popleft()
                 if node:
                     rightNode=node
                     q.append(node.left)
