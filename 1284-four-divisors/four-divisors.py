@@ -17,3 +17,18 @@ class Solution(object):
             if len(divisers)==4:
                 total+=sum(divisers)
         return total
+
+        # total=0
+        # for num in nums:
+        #     divisers=[]
+        #     for i in range(1,int(sqrt(num))+1):
+        #         if len(divisers)>4:
+        #             break
+        #         if num%i==0:
+        #             divisers.append(i)
+        #             otherdiviser=num//i
+        #             if i!=otherdiviser:
+        #                 divisers.append(otherdiviser)
+        #         if len(divisers)==4:
+        #             total+=sum(divisers)
+        # return total
