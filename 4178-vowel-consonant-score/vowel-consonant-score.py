@@ -4,10 +4,10 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        vowels={'a','e','i','o','u'}
+        
         vcnt=ccnt=0
         for c in s:
-            if c in vowels:
+            if c in {'a','e','i','o','u'}:
                 vcnt+=1
             else:
                 if c.isalpha():
