@@ -5,8 +5,10 @@ class Solution(object):
         :type target: str
         :rtype: str
         """
-        for c in letters:
-            # print(ord(target)-ord(c))
-            if ord(c)-ord(target)>0:
-                return c
-        return letters[0]
+        return next((c for c in letters if c > target), letters[0])
+
+        # for c in letters:
+        #     # print(ord(target)-ord(c))
+        #     if ord(c)-ord(target)>0:
+        #         return c
+        # return letters[0]
