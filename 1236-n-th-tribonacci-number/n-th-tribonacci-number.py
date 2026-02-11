@@ -1,0 +1,12 @@
+class Solution(object):
+    def tribonacci(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        t=[0,1,1]
+        if n<3:
+            return t[n]
+        for _ in range(3,n+1):
+            t[0],t[1],t[2]=t[1],t[2],sum(t)
+        return t[2]
